@@ -148,7 +148,7 @@ function search(val) {
    <td>
  <a href='#editEmployeeModal' class='edit' ><i class='material-icons'  title='Edit'>&#xE254;</i></a>
    </td> 
-   <td><a href='#editEmployeeModal' class='edit' onclick="deleteCourse(${i}) "><i class='material-icons'  title='Delete'>&#xE872;</i></a>
+   <td><a href='#editEmployeeModal' class='delete' onclick="deleteCourse(${i}) "><i class='material-icons'  title='Delete'>&#xE872;</i></a>
    </td></tr>`;
 
       //  console.log(result) "</tr>"
@@ -175,7 +175,7 @@ function updateData() {
     name: customerNameInput.value,
     address: addressInput.value,
     city: cityInput.value,
-    phone: phoneInput.value,
+    phone: phoneInput.value
   };
   //هون عشان يعدل على ال row  اللي ضغطت عليه
   array_customer[current_index].name = customer.name;
@@ -183,12 +183,13 @@ function updateData() {
   array_customer[current_index].city = customer.city;
   array_customer[current_index].phone = customer.phone;
   //console.log(array_customer);
-  localStorage.setItem("customer_data", JSON.stringify(array_customer));
-  swal("Good job!", "You clicked the button!", "success");
+  localStorage.setItem("EmployeesList", JSON.stringify(array_customer));
+  
   btn_click.innerHTML = "Add";
+  swal("Good job!", "You clicked the button!", "success");
 }
 
-
+/*
 customerName.onkeyup=function(){
   var namepattern=/^[a-z]{2,10}$/
   if(namepattern.test(customerName.value)){
@@ -206,4 +207,4 @@ customerName.onkeyup=function(){
     namealert.classList.remove("d-none")
 
   }
-}
+}*/
