@@ -16,6 +16,7 @@ body {
 .search-box {
     position: relative;        
     float: right;
+    
 }
 .search-box input {
     height: 34px;
@@ -23,6 +24,7 @@ body {
     padding-left: 35px;
     border-color: #ddd;
     box-shadow: none;
+    
 }
 .search-box input:focus {
     border-color: #3FBAE4;
@@ -91,11 +93,11 @@ margin:auto;
 width: 80%;
  margin: auto;
 margin-top:40px;
-box-shadow:5px 5px 21px  #dcdcdc;
+box-shadow:5px 5px 21px  #b19d9d;
 text-align: center;
 }
 button{
-background-color: #ffffff;
+
 border: 1px solid black;
 color: #2e2626;
 width: 93px;
@@ -110,4 +112,6 @@ background-color:#575757;
 color:white;
 }
 
-   
+#namealert{
+   display: none; 
+}

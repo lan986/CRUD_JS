@@ -5,7 +5,7 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Bootstrap Simple Data Table</title>
+  <title>Crud system</title>
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
@@ -13,14 +13,19 @@
   <link rel="stylesheet" href="style2.css" />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 </head>
 
 <body>
   <div class="add-course">
     <div class="container">
+     
       <h1>Customer System</h1>
-      <label for="">Customer Name</label>
-      <input class="inputs" type="text" placeholder="Name" id="customerName" />
+      <label for=""> Customer Name</label>
+      <input class="inputs " type="text" placeholder="Name" id="customerName"  />
+      <div   class="alert alert-danger"  id="namealert"  value="please enter name with letter">please enter name with letter</div>
 
       <label for="">Address</label>
       <input class="inputs" type="text" placeholder="address" id="address" />
@@ -29,7 +34,7 @@
       <label for="">Phone Number</label>
       <input class="inputs" type="phone" placeholder="phone" id="phone" />
 
-      <button id="click" >Add</button>
+      <button  type="" id="click" disabled>Add</button>
       <button type="reset" id="clear">clear</button>
       
     </div>
@@ -41,11 +46,16 @@
         <div class="table-wrapper">
           <div class="table-title">
             <div class="row">
-              <div class="col-sm-8">
+              <div class="col-sm-4">
                 <h2>Customer <b>Details</b></h2>
               </div>
               <div class="col-sm-4">
+              <button class="delete" id="deleteBtn">Delete All </button></div>
+
+              <div class="col-sm-4">
+                
                 <div class="search-box">
+                  
                   <input type="text"  onkeyup="search(this.value)" class="form-control" placeholder="Search&hellip;"  />
                 </div>
               </div>
@@ -70,6 +80,10 @@
     </div>
   </div>
   <script src="main2.js"></script>
+
+
+
+
 </body>
 
 </html>
